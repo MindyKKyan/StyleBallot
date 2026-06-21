@@ -1,0 +1,176 @@
+/* StyleBallot UX V2 — Apple-minimal + workflow + alignment dashboard */
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #86868b;
+  --border: rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --accent: #007aff;
+  --success: #34c759;
+}
+
+.gradio-container {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  background: var(--bg) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif !important;
+  color: var(--text) !important;
+  padding: 32px 24px 48px !important;
+}
+
+.page-top { position: relative; margin-bottom: 24px; }
+.page-top .block.lang-select {
+  position: absolute !important;
+  top: 0; right: 0;
+  width: auto !important;
+  min-width: 148px !important;
+  z-index: 3;
+  background: transparent !important;
+  border: none !important;
+}
+.page-top .lang-select label { display: none !important; }
+
+.app-header { text-align: center; margin-bottom: 0; }
+.app-header .eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-tertiary); margin: 0 0 8px;
+}
+.app-header h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 10px; }
+.app-header .subtitle {
+  font-size: 16px; line-height: 1.5; color: var(--text-secondary);
+  max-width: 680px; margin: 0 auto;
+}
+
+.intro-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.intro-head h2 { font-size: 17px; font-weight: 650; margin: 0 0 8px; }
+.intro-body { font-size: 14px; line-height: 1.55; color: var(--text-secondary); margin: 0 0 10px; }
+.intro-list { margin: 0; padding-left: 20px; color: var(--text-secondary); font-size: 14px; }
+.cost-note { font-size: 12px; color: var(--text-tertiary); margin: 12px 0 0; }
+
+.workflow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.workflow-step {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e8e8ed;
+  color: var(--text-secondary);
+}
+.workflow-step.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.main-row { gap: 28px !important; align-items: flex-start !important; }
+.left-col .gr-image {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+.left-col .gr-image .image-container { min-height: 320px !important; }
+
+.upload-hint { text-align: center; font-size: 13px !important; color: var(--text-tertiary) !important; margin: 4px 0 12px !important; }
+
+.primary-btn button {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  width: 100%;
+  padding: 12px 24px !important;
+}
+
+.right-col .gr-gallery {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.diagnosis-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+.diagnosis-box.agree { border-color: rgba(52, 199, 89, 0.35); background: rgba(52, 199, 89, 0.06); }
+.diagnosis-box.gap { border-color: rgba(255, 149, 0, 0.35); background: rgba(255, 149, 0, 0.06); }
+.diagnosis-box p { margin: 0; font-size: 15px; line-height: 1.5; }
+.diagnosis-source { font-size: 12px; color: var(--text-tertiary); margin-top: 8px; }
+
+.align-dashboard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  margin: 12px 0;
+}
+.align-dashboard-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary); margin: 0 0 12px; }
+.dim-group { margin-bottom: 14px; }
+.dim-group-title { font-size: 12px; font-weight: 600; color: var(--text-secondary); margin: 0 0 6px; }
+.align-bar-row { margin-bottom: 8px; }
+.align-bar-head { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; }
+.align-bar-pct { color: var(--text-tertiary); font-variant-numeric: tabular-nums; }
+.align-bar-track { height: 6px; background: #e8e8ed; border-radius: 3px; overflow: hidden; }
+.align-bar-fill { height: 100%; border-radius: 3px; }
+.ai-badge { font-size: 10px; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 4px; margin-left: 6px; }
+
+.palette-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.palette-block { flex: 1; min-width: 100px; }
+.palette-title { font-size: 11px; color: var(--text-tertiary); display: block; margin-bottom: 6px; }
+.palette-chips { display: flex; gap: 4px; }
+.palette-chip { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.08); }
+
+.aesthetic-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12px; margin-top: 10px; }
+.aesthetic-badge { padding: 3px 8px; border-radius: 6px; font-weight: 600; font-size: 11px; }
+.aesthetic-badge.up { background: rgba(52,199,89,0.15); color: #248a3d; }
+.aesthetic-badge.down { background: rgba(255,59,48,0.12); color: #c9342b; }
+.aesthetic-badge.neutral { background: #e8e8ed; color: var(--text-secondary); }
+.aesthetic-label { color: var(--text-tertiary); margin-right: 8px; }
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid rgba(52, 199, 89, 0.25);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-top: 12px;
+}
+.profile-card h3 { margin: 0 0 10px; font-size: 16px; }
+.profile-card p { font-size: 14px; line-height: 1.5; color: var(--text-secondary); margin: 0 0 14px; }
+.profile-bar-row { display: grid; grid-template-columns: 100px 1fr 36px; gap: 10px; align-items: center; font-size: 12px; margin-bottom: 8px; }
+.profile-bar-track { height: 6px; background: #e8e8ed; border-radius: 3px; overflow: hidden; }
+.profile-bar-fill { height: 100%; background: var(--success); border-radius: 3px; }
+
+pre.json-raw {
+  background: #fafafa !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  font-size: 12px !important;
+  padding: 14px !important;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.status-msg.error { color: #ff3b30; font-size: 13px; }
+.gr-accordion { margin-top: 16px !important; border-radius: var(--radius-sm) !important; }
+footer { opacity: 0.45; }

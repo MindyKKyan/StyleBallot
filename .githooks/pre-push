@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Block pushes to the wrong GitHub repo (e.g. Riverchain-Infos1 when cwd is StyleBallot).
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+URL="$(git remote get-url origin 2>/dev/null || true)"
+if [[ "$URL" != *"MindyKKyan/StyleBallot"* ]]; then
+  echo "pre-push: refused — origin is not MindyKKyan/StyleBallot ($URL)" >&2
+  echo "Use: bash scripts/deploy_github.sh" >&2
+  exit 1
+fi
